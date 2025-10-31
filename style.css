@@ -1,0 +1,50 @@
+/* Minimalist styling para venta de accesorios de carros */
+:root{
+  --bg:#fbfbfb;
+  --card:#ffffff;
+  --muted:#6b7280;
+  --accent:#111827;
+  --accent-2:#ef4444;
+  --glass:rgba(17,24,39,0.04);
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background:var(--bg);
+  color:var(--accent);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+.container{max-width:1000px;margin:0 auto;padding:24px}
+.site-header{background:transparent;padding:18px 0}
+.brand{font-weight:700;color:var(--accent);text-decoration:none;font-size:1.1rem}
+.nav{display:flex;gap:18px;align-items:center}
+.nav a{color:var(--muted);text-decoration:none;font-weight:600}
+.nav a:hover{color:var(--accent)}
+.main{padding:24px 0}
+.hero{padding:40px 0;text-align:center}
+.hero h1{margin:0;font-size:2rem}
+.lead{color:var(--muted);margin-top:10px}
+.btn{display:inline-block;background:var(--accent);color:#fff;padding:10px 14px;border-radius:8px;text-decoration:none;font-weight:600}
+.btn.ghost{background:transparent;color:var(--accent);border:1px solid rgba(0,0,0,0.06)}
+.features{display:flex;gap:16px;margin-top:28px}
+.card{background:var(--card);border-radius:12px;padding:16px;box-shadow:0 1px 0 rgba(0,0,0,0.03);}
+.card.small{flex:1;text-align:center}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:18px}
+.product .media{height:120px;border-radius:8px;background:linear-gradient(135deg,#f3f4f6,#e5e7eb);margin-bottom:12px}
+.product h3{margin:0 0 6px 0}
+.price{color:var(--accent-2);font-weight:700}
+.desc{color:var(--muted);font-size:0.95rem}
+.site-footer{border-top:1px solid var(--glass);padding:18px 0;margin-top:36px;color:var(--muted)}
+.form{max-width:560px}
+.form label{display:block;margin-bottom:12px;color:var(--muted);font-size:0.95rem}
+.form input,.form textarea{width:100%;padding:10px;border-radius:8px;border:1px solid #e6e6e6;margin-top:6px}
+@media (max-width:700px){
+  .features{flex-direction:column}
+  .nav{gap:10px}
+  .container{padding:16px}
+}
+/* pequeños detalles */
+a.btn:active{transform:translateY(1px)}
